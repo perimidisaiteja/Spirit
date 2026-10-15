@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bauhaus-bg: #F0F0F0;
+  --bauhaus-fg: #121212;
+  --bauhaus-red: #D02020;
+  --bauhaus-blue: #1040C0;
+  --bauhaus-yellow: #F0C020;
+  --bauhaus-white: #FFFFFF;
+  --bauhaus-muted: #E0E0E0;
+  --bauhaus-border: #121212;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bauhaus-bg);
+  color: var(--bauhaus-fg);
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Enforce square corners by default — rounded-none */
+button, input, select, textarea, div, section, article {
+  border-radius: 0px;
+}
+
+/* Hard Offset Shadows */
+.shadow-hard-sm {
+  box-shadow: 3px 3px 0 #121212;
+}
+
+.shadow-hard-md {
+  box-shadow: 6px 6px 0 #121212;
+}
+
+.shadow-hard-lg {
+  box-shadow: 8px 8px 0 #121212;
+}
+
+.shadow-hard-xl {
+  box-shadow: 12px 12px 0 #121212;
+}
+
+.shadow-hard-red {
+  box-shadow: 6px 6px 0 #D02020;
+}
+
+.shadow-hard-blue {
+  box-shadow: 6px 6px 0 #1040C0;
+}
+
+.shadow-hard-yellow {
+  box-shadow: 6px 6px 0 #F0C020;
+}
+
+.shadow-hard-white {
+  box-shadow: 6px 6px 0 #FFFFFF;
+}
+
+/* Button Tactile Physical Press */
+.btn-bauhaus {
+  position: relative;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  font-family: 'Outfit', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-bauhaus:hover:not(:disabled) {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 #121212;
+}
+
+.btn-bauhaus:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 #121212 !important;
+}
+
+.btn-bauhaus:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: 2px 2px 0 #121212 !important;
+}
+
+/* Bauhaus Card Hover Lift */
+.card-bauhaus-lift {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card-bauhaus-lift:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 10px 10px 0 #121212;
+}
+
+/* Accessibility Focus Ring */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 4px solid #1040C0 !important;
+  outline-offset: 2px !important;
+}
+
+/* Custom Scrollbar Bauhaus */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F0F0F0;
+  border-left: 2px solid #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #121212;
+  border: 2px solid #F0F0F0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D02020;
+}
